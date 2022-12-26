@@ -1,4 +1,13 @@
 {
+  "name": "doc@ease",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+{
   "dependencies": {
     "alert": "^5.1.3",
     "dotenv": "^16.0.3",
