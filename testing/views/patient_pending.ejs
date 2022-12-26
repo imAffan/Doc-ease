@@ -1,0 +1,42 @@
+<% layout('layouts/dboilerplate')%>
+<style>
+    #cards{
+        background-color: grey;
+        color: white;
+    }
+    </style>
+<h1>Pending Bookings</h1>
+
+ 
+<div class="row text-center">
+
+     
+     
+
+    <% for (let campground of lst4){%>
+     
+      
+
+    <div class="col">
+
+        <div class="card" id="cards"style="width: 18rem; margin : 20px;">
+           
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;" >Doctor Name : <%= campground.dname %> </h5>
+               
+           
+             <p class="card-text"   style=" text-align: center;"   > <%= campground.slot%></p>
+
+             <p class="card-text"   style=" text-align: center;font-size: 75%"   >Scheduled on :  <%= campground.date %></p>
+           
+            
+           
+              
+          
+
+
+           
+            </div>
+          </div>
+</div>
+<% }%>

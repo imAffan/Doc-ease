@@ -1,0 +1,63 @@
+<% layout('layouts/boilerplate')%>
+<style>
+#box{
+    width: auto;
+  border: 15px solid darkcyan;
+  border-radius: 15px;
+  padding: 50px;
+  margin: 20px;
+  position: relative;
+  left: 420px;
+}
+body{
+    background-image: url("https://medicalnewsbulletin.com/wp-content/uploads/2017/02/type-2-diabetes-and-atrial-fibrillationopt.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Times New Roman', Times, serif;
+}
+</style>
+<div class="row">
+    <h1 class="text-center">Welcome to Doc@ease.</h1>
+    <h3 class="text-center">Sign up / Register</h3>
+    <div class="col-6 offset-3" id="box">
+        <form action="/signup" method="post" novalidate class="validated-form">
+            <div class="mb-3">
+                <label class="form-label" for="Username"><b>Username</b></label>
+                <input class="form-control" type="text" id="Username" name="username"
+                    placeholder="Enter your Username" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="email"><b>Email</b></label>
+                <input class="form-control" type="email" id="email" name="email"
+                    placeholder="Enter your email" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="Password"><b>Password</b></label>
+                <input class="form-control" type="password" id="Password" name="Password"
+                    placeholder="Password" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <label for="sel"><b>Choose what describes you</b></label>
+
+            <select name="sel"id="typee">
+            <option value="patient">Patient</option>
+            <option value="doctor">Doctor</option>
+            </select>
+            <div class="mb-3">
+                <button class="btn btn-info">Sign up</button>
+            </div>
+
+        </form>
+        
+
+
+    </div>
+</div>

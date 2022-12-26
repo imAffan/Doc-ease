@@ -1,0 +1,45 @@
+<% layout('layouts/dboilerplate')%>
+<h1>Pending</h1>
+<style>
+    #cards{
+        background-color: grey;
+        color: white;
+    }
+    </style>
+ 
+<div class="row text-center">
+
+     
+     
+
+    <% for(let campground of lst4){%>
+    
+      
+
+    <div class="col">
+
+        <div class="card" id="cards" style="width: 18rem; margin : 20px;">
+           
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;" >  patient id:  </h5>
+              <button style="border-radius: 10px;font-size:small"> <%= campground.pid %></button>
+
+            <!-- <a href="#!" class="btn btn-primary">Add</a>--> 
+            
+             <p class="card-text"   style=" text-align: center;"   > <%= campground.slot%></p>
+
+             <p class="card-text"   style=" text-align: center;"   > <%= campground.date %></p>
+             <div class="mb-3">
+              <a href="/confirm/<%=campground._id%>" class="btn btn-info"> Confirm</a>
+             </div>
+            
+           
+              
+          
+
+
+           
+            </div>
+          </div>
+</div>
+<% }%>

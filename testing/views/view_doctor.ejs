@@ -1,0 +1,68 @@
+<% layout('layouts/boilerplate')%>
+ <style>
+#boxx{
+    width: 400px;
+}
+ </style>
+<h1> <%= doc1[0].name %> Details</h1>
+ 
+<div class="row col-6 offset-4">
+    <div class="col">
+
+        <div class="card" style="width: 24rem; margin : 20px;" id="boxx">
+            <img src="<%=doc1[0].img%>" class="card-img-top" alt="Fissure in Sandstone"/>
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;" ><%= doc1[0].name %> </h5>
+
+              <% for (let campgrounds of doc1[0].qual){%>
+              <p class="card-text"   style="text-align: center;"   > <%=campgrounds %></p>
+              <% }%>
+            <!-- <a href="#!" class="btn btn-primary">Add</a>--> 
+            <% for (let campgrounds of doc1[0].specs){%>
+                <button class="card-text"   style=" text-align: center;border-radius: 10px;font-size: 69%; margin-left: 40px;"   > <%= campgrounds %> </button>
+                <% }%>
+                     
+             <p class="card-text"   style=" text-align: center;"   > <%= doc1[0].exp %></p>
+
+             <p class="card-text"   style=" text-align: center;"   > <%= doc1[0].age %></p>
+             Choose a slot:
+           <form action="/booknow/<%=doc1[0]._id%>/<%=pid%>" method="post"> 
+             
+            <select name="cars" id="cars">
+                <% for (let campground of doc1[0].slots){%>
+            <option value="<%= campground %>"><%= campground %></option>
+            <% }%>
+
+            </select> 
+             <div class="mb-3">
+                <div class="mb-3">
+                    <p>Consultency Fee of 500/- INR</p>
+                    <h3><a href="https://rzp.io/i/1Gegl7g"target="_blank" >Pay here</a></h3>
+                    
+                    <button class="btn btn-info">book now!</button>
+                </div>
+             </div>
+            
+            </form> 
+              
+          
+
+
+           
+            </div>
+          </div>
+</div>
+ 
+ 
+ 
+
+
+ 
+ 
+
+ 
+
+
+ 
+
+

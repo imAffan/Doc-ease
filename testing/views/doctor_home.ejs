@@ -1,0 +1,46 @@
+<% layout('layouts/dboilerplate')%>
+<style>
+    #cards{
+        background-color: grey;
+        color: white;
+    }
+    </style>
+  
+  <form action="/pendings" method="post" novalidate class="validated-form">
+    <input type="text" name="dn" value="<%= lst4[0].dname %>" hidden  >
+    <button   type="submit"   class="btn btn-info" style="background-color: darkcyan;border-radius: 10px;float: left;">check Pending</button>
+</form>
+<h1 style="text-align:center" >Bookings</h1>
+
+ 
+<div class="row text-center">
+
+   
+
+
+ 
+  <% for(let campground of lst4){%>
+      
+
+    <div class="col">
+
+        <div class="card" id="cards" style="width: 18rem; margin : 20px;">
+           
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;" >Patient id :  </h5>
+              <button style="border-radius: 10px;font-size:small"> <%= campground.pid %></button>
+             <p class="card-text"   style=" text-align: center;"   >Scheduled slot :<%= campground.slot%></p>
+
+             <p class="card-text"   style=" text-align: center; font-size: 75%;"   >Scheduled On <%= campground.date %></p>
+             <a href="https://gotalk.to/<%=campground._id%>" style=" margin-left: 30px; font-size: 48%" class="btn btn-info">Send prescription</a>
+             <br>
+             <div class="mb-3">
+                <a href="https://gotalk.to/<%=campground._id%>" style=" margin-left: 30px; font-size: 48%" class="btn btn-info">Join Meet</a>
+      
+               </div>
+           
+          
+            </div>
+          </div>
+</div>
+<% }%>
