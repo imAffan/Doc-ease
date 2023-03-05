@@ -6,6 +6,7 @@ const { ObjectId } = require("mongodb")
 const methodOverride = require('method-override');
 require('dotenv').config()
  
+const app = express();
  
 const db = require('./db');
 const { appendFile } = require('fs');
@@ -14,12 +15,12 @@ db.initDb((err, db) => {
         console.log(err)
     } else {
         console.log("connected")
-        const port = 3002
-        app.listen(port)
+//         const port = 3001
+        app.listen(3002)
     }
 })
 
-const app = express();
+
 
 app.engine('ejs', ejsMate)
 app.set('view engine', 'ejs');
