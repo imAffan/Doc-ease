@@ -14,7 +14,7 @@ db.initDb((err, db) => {
         console.log(err)
     } else {
         console.log("connected")
-        const port = process.env.PORT || 3001
+        const port = 3002
         app.listen(port)
     }
 })
