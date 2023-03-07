@@ -16,7 +16,7 @@ db.initDb((err, db) => {
     } else {
         console.log("connected")
 //         const port = 3001
-        app.listen(3002)
+        app.listen(3000)
     }
 })
 
