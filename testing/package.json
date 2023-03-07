@@ -3,8 +3,9 @@
   "name": "doc@ease",
   "version": "1.0.0",
   "description": "",
-  "main": "./testing/app.js",
+  "main": "/testing/app.js",
   "scripts": {
+    "start": "node app"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
